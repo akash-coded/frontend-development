@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <form action="login-backend" method="GET">
+      <div id="firstNameField" name="nameField">
+        <label for="fname">First name:*</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          autocomplete="off"
+          autofocus
+          required
+        /><br />
+      </div>
+
+      <div id="lastNameField" name="nameField">
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" /><br />
+      </div>
+
+      <div id="ageField" name="ageField">
+        <label for="age">Age:</label><br />
+        <input type="number" id="age" name="age" /><br />
+      </div>
+
+      <div id="genderField" name="genderField">
+        <fieldset>
+          <legend>Gender</legend>
+          <input type="radio" name="gender" id="male" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="female" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="other" value="other" />
+          <label for="other">Other</label>
+          <input
+            type="radio"
+            name="gender"
+            id="undisclosed"
+            value="undisclosed"
+          />
+          <label for="undisclosed">Rather not say</label>
+        </fieldset>
+      </div>
+
+      <div id="optionsField" name="optionsField">
+        <fieldset>
+          <legend>Employment status</legend>
+          <input type="checkbox" name="student" id="student" />
+          <label for="student">Student</label>
+          <input type="checkbox" name="unemployed" id="unemployed" />
+          <label for="unemployed">Unemployed</label>
+          <input type="checkbox" name="part-time" id="part-time" />
+          <label for="part-time">Part-time</label>
+          <input type="checkbox" name="full-time" id="full-time" />
+          <label for="full-time">Full-time</label>
+        </fieldset>
+      </div>
+
+      <div id="countryField" name="countryField">
+        <label for="country">Country:</label><br />
+        <select name="country" id="country">
+          <option value="india">India</option>
+          <option value="india">Australia</option>
+          <option value="india" selected>England</option>
+          <option value="india">South Africa</option>
+        </select>
+      </div>
+
+      <div id="bioField" name="bioField">
+        <label for="bio">Bio:</label><br />
+        <textarea name="bio" id="bio" cols="30" rows="5"> </textarea>
+      </div>
+
+      <div id="emailField" name="emailField">
+        <label for="email">Email:*</label><br />
+        <input type="email" id="email" name="email" required /><br />
+      </div>
+
+      <div id="passwordField" name="passwordField">
+        <label for="email">Password:*</label><br />
+        <input type="password" id="password" name="password" required /><br />
+      </div>
+
+      <div id="submitButton">
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
