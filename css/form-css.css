@@ -1,0 +1,16 @@
+/* external css  */
+fieldset {
+  color: grey;
+}
+
+#lastNameField {
+  color: red;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-blue {
+  color: blue;
+}
