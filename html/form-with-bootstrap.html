@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css" />
+  </head>
+
+  <body>
+    <main class="col-4 col-lg-6 mx-auto">
+      <header class="text-center">
+        <h1 class="text-primary text-uppercase">Register</h1>
+        <h6 class="text-secondary">Provide your details</h6>
+      </header>
+      <hr />
+
+      <section>
+        <form action="login-backend" method="GET" class="font-weight-bold">
+          <div id="name" name="name" class="row form-group">
+            <div id="firstNameField" name="nameField" class="col">
+              <label for="fname">First name:*</label><br />
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                class="form-control"
+                autocomplete="off"
+                autofocus
+                required
+              />
+            </div>
+            <div id="lastNameField" name="nameField" class="col">
+              <label for="lname">Last name:</label><br />
+              <input type="text" id="lname" name="lname" class="form-control" />
+            </div>
+          </div>
+
+          <div id="emailField" name="emailField" class="form-group">
+            <label for="email">Email:*</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              required
+            />
+            <small id="emailFieldHelp" class="form-text text-muted"
+              >Your email is safe with us :)</small
+            >
+          </div>
+
+          <div id="ageField" name="ageField" class="form-group">
+            <label for="age">Age:</label><br />
+            <input type="number" id="age" name="age" class="form-control" />
+          </div>
+
+          <div id="genderField" name="genderField">
+            <fieldset>
+              <legend>Gender</legend>
+              <input type="radio" name="gender" id="male" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="female" value="female" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="other" value="other" />
+              <label for="other">Other</label>
+              <input
+                type="radio"
+                name="gender"
+                id="undisclosed"
+                value="undisclosed"
+              />
+              <label for="undisclosed">Rather not say</label>
+            </fieldset>
+          </div>
+
+          <div
+            id="employmentOptionsField"
+            name="employmentOptionsField"
+            class="form-group font-weight-normal"
+          >
+            <label for="employmentStatus" class="font-weight-bold"
+              >Employment Status:*</label
+            ><br />
+            <div
+              id="employmentStatus"
+              name="employmentStatus"
+              class="form-control"
+            >
+              <div class="form-check form-check-inline">
+                <input
+                  type="checkbox"
+                  name="student"
+                  id="student"
+                  class="form-check-input"
+                />
+                <label for="student" class="form-check-label">Student</label>
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input
+                  type="checkbox"
+                  name="unemployed"
+                  id="unemployed"
+                  class="form-check-input"
+                />
+                <label for="unemployed" class="form-check-label"
+                  >Unemployed</label
+                >
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input
+                  type="checkbox"
+                  name="part-time"
+                  id="part-time"
+                  class="form-check-input"
+                />
+                <label for="part-time" class="form-check-label"
+                  >Part-time</label
+                >
+              </div>
+
+              <div class="form-check form-check-inline">
+                <input
+                  type="checkbox"
+                  name="full-time"
+                  id="full-time"
+                  class="form-check-input"
+                />
+                <label for="full-time" class="form-check-label"
+                  >Full-time</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div id="countryField" name="countryField">
+            <label for="country">Country:</label><br />
+            <select name="country" id="country">
+              <option value="india">India</option>
+              <option value="india">Australia</option>
+              <option value="india" selected>England</option>
+              <option value="india">South Africa</option>
+            </select>
+          </div>
+
+          <div id="bioField" name="bioField">
+            <label for="bio">Bio:</label><br />
+            <textarea name="bio" id="bio" cols="30" rows="5"> </textarea>
+          </div>
+
+          <div id="passwordField" name="passwordField">
+            <label for="email">Password:*</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br />
+          </div>
+
+          <div id="submitButton">
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="../vendor/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>
