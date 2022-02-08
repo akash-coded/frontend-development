@@ -4,12 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms</title>
+    <title>Bootstrap Registration Form</title>
     <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    /> -->
   </head>
 
   <body>
-    <main class="col-4 col-lg-6 mx-auto">
+    <main class="col-md-5 mx-auto">
       <header class="text-center">
         <h1 class="text-primary text-uppercase">Register</h1>
         <h6 class="text-secondary">Provide your details</h6>
@@ -17,7 +23,8 @@
       <hr />
 
       <section>
-        <form action="login-backend" method="GET" class="font-weight-bold">
+        <form action="register-backend" method="GET" class="font-weight-bold">
+          <!-- Name (firstname and lastname) -->
           <div id="name" name="name" class="row form-group">
             <div id="firstNameField" name="nameField" class="col">
               <label for="fname">First name:*</label><br />
@@ -37,6 +44,7 @@
             </div>
           </div>
 
+          <!-- Email -->
           <div id="emailField" name="emailField" class="form-group">
             <label for="email">Email:*</label><br />
             <input
@@ -44,6 +52,7 @@
               id="email"
               name="email"
               class="form-control"
+              placeholder="abc@xyz.com"
               required
             />
             <small id="emailFieldHelp" class="form-text text-muted"
@@ -51,42 +60,76 @@
             >
           </div>
 
+          <!-- Password -->
+          <div id="passwordField" name="passwordField" class="form-group">
+            <label for="password">Password:*</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              required
+            />
+            <small id="passwordHelp" class="form-text text-muted"
+              ><ul>
+                <li>Password should be between 8-16 characters</li>
+                <li>
+                  Password should contain both lowercase and uppercase alphabets
+                </li>
+                <li>Password should contain at least one special symbol</li>
+              </ul></small
+            >
+          </div>
+
+          <!-- Date of Birth -->
+          <div id="dobField" name="dobField" class="form-group">
+            <label for="dob">Date of Birth:</label><br />
+            <input type="date" id="dob" name="dob" class="form-control" />
+          </div>
+
+          <!-- Age -->
           <div id="ageField" name="ageField" class="form-group">
             <label for="age">Age:</label><br />
             <input type="number" id="age" name="age" class="form-control" />
           </div>
 
-          <div id="genderField" name="genderField">
-            <fieldset>
-              <legend>Gender</legend>
-              <input type="radio" name="gender" id="male" value="male" />
-              <label for="male">Male</label>
-              <input type="radio" name="gender" id="female" value="female" />
-              <label for="female">Female</label>
-              <input type="radio" name="gender" id="other" value="other" />
-              <label for="other">Other</label>
-              <input
-                type="radio"
-                name="gender"
-                id="undisclosed"
-                value="undisclosed"
-              />
-              <label for="undisclosed">Rather not say</label>
-            </fieldset>
+          <!-- Gender -->
+          <div id="genderField" name="genderField" class="form-group">
+            <label for="genderOption">Gender:</label><br />
+            <div class="font-weight-normal" id="gender" name="gender">
+              <div class="form-check form-check-inline">
+                <input type="radio" name="gender" id="male" value="male" />
+                <label for="male" class="form-check-label">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="gender" id="female" value="female" />
+                <label for="female" class="form-check-label">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="gender" id="other" value="other" />
+                <label for="other" class="form-check-label">Other</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="undisclosed"
+                  value="undisclosed"
+                />
+                <label for="undisclosed" class="form-check-label"
+                  >Rather not say</label
+                >
+              </div>
+            </div>
           </div>
 
-          <div
-            id="employmentOptionsField"
-            name="employmentOptionsField"
-            class="form-group font-weight-normal"
-          >
-            <label for="employmentStatus" class="font-weight-bold"
-              >Employment Status:*</label
-            ><br />
+          <!-- Employment Status -->
+          <div id="employmentField" name="employmentField" class="form-group">
+            <label for="employmentStatus">Employment Status:*</label><br />
             <div
               id="employmentStatus"
               name="employmentStatus"
-              class="form-control"
+              class="font-weight-normal"
             >
               <div class="form-check form-check-inline">
                 <input
@@ -136,9 +179,10 @@
             </div>
           </div>
 
-          <div id="countryField" name="countryField">
+          <!-- Country -->
+          <div id="countryField" name="countryField" class="form-group">
             <label for="country">Country:</label><br />
-            <select name="country" id="country">
+            <select name="country" id="country" class="form-control">
               <option value="india">India</option>
               <option value="india">Australia</option>
               <option value="india" selected>England</option>
@@ -146,28 +190,58 @@
             </select>
           </div>
 
-          <div id="bioField" name="bioField">
+          <!-- Bio -->
+          <div id="bioField" name="bioField" class="form-group">
             <label for="bio">Bio:</label><br />
-            <textarea name="bio" id="bio" cols="30" rows="5"> </textarea>
+            <textarea
+              name="bio"
+              id="bio"
+              rows="5"
+              class="form-control"
+              placeholder="Please introduce yourself"
+            >
+            </textarea>
           </div>
 
-          <div id="passwordField" name="passwordField">
-            <label for="email">Password:*</label><br />
+          <!-- Profile Picture Upload -->
+          <div id="profilePicField" class="form-group">
+            <label for="profilePicture">Upload a photo:</label><br />
             <input
-              type="password"
-              id="password"
-              name="password"
-              required
-            /><br />
+              type="file"
+              name="profilePicture"
+              id="profilePicture"
+              class="form-control-file"
+              accept=".pdf"
+            />
           </div>
 
-          <div id="submitButton">
-            <input type="submit" value="Submit" />
+          <!-- Submit Button -->
+          <div id="registrationButton">
+            <input
+              type="registration"
+              value="Register"
+              class="btn btn-block btn-primary mb-2"
+            />
           </div>
         </form>
       </section>
     </main>
 
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
     <script src="../vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script> -->
   </body>
 </html>
