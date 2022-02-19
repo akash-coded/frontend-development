@@ -131,6 +131,12 @@
         return true;
       }
 
+      function validateEmailWithRegex(email) {
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        return !!email && typeof email === "string" && email.match(emailRegex);
+      }
+
       function checkInputEmail(email) {
         let isValidEmail = validateEmail(email);
 
